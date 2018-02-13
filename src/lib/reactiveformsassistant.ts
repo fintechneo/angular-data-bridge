@@ -12,6 +12,7 @@ import { Subject } from 'rxjs/Subject';
 /**
  * Change notifications are sent with this class containing a string array for the
  * object path and the changed value.
+ * 
  */
 export class FormUpdateEvent {
     constructor(
