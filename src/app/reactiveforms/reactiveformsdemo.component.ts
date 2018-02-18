@@ -7,7 +7,7 @@ import { MatDrawer } from '@angular/material';
 
 import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
-import { LocalFormAwareDataService } from '../../local/localformawaredata.service';
+import { LocalFormAwareDataService } from '../local/localformawaredata.service';
 
 export class Meeting {
     title = 'Meeting';

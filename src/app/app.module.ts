@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LocalFormAwareDataService } from './local/localformawaredata.service';
-import { ReactiveFormsDemoComponent } from './demo/reactiveforms/reactiveformsdemo.component';
+import { ReactiveFormsDemoComponent } from './reactiveforms/reactiveformsdemo.component';
 import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -16,11 +16,13 @@ import { MatToolbarModule, MatButtonModule, MatInputModule } from '@angular/mate
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormAssistant } from '../lib/reactiveformsassistant';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SectiondataComponent } from './sectiondata/sectiondata.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactiveFormsDemoComponent
+    ReactiveFormsDemoComponent,
+    SectiondataComponent
 
   ],
   imports: [
@@ -44,10 +46,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ReactiveFormsModule,
 
     RouterModule.forRoot([
-        {
-          path: "demo",
-          component: ReactiveFormsDemoComponent
-        }]
+          {
+            path: "reactiveform",
+            component: ReactiveFormsDemoComponent
+          },
+          {
+            path: "sectiondata",
+            component: SectiondataComponent
+          }
+        ]
     ) ],
   providers: [LocalFormAwareDataService, ReactiveFormAssistant],
   bootstrap: [AppComponent]

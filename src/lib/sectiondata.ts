@@ -20,12 +20,11 @@ export interface SectionData {
      */
     sendUpdatesByPathArray(pathArray: string[], val: any, section?: string): any ;
 
-
     /**
-     * Returns an observable that notifies if the data in the section changes. 
+     * Returns an observable that notifies if the data in the section changes.
      * 
-     * @param {string} sectionName 
-     * @returns {Observable<any>} 
+     * @param {string} sectionName
+     * @returns {Observable<any>}
      * @memberof SectionData
      */
     getSection(sectionName: string): Observable<any>;
